@@ -1,8 +1,17 @@
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 
 int main()
 {
-	int guesses = 0, tries_left = 5, num_to_guess = 15, num, rounds;
+	time_t t;
+	srand((unsigned) time(&t));
+
+	int num_to_guess = rand() % 21;
+
+	int guesses = 0, tries_left = 5, num, rounds;
 
 	printf("This is a guessing game.\n");
 
